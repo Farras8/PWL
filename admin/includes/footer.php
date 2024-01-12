@@ -1,5 +1,5 @@
 </main>
-<footer class="py-4  mt-auto" style="background-color: #86ba8a;">
+<footer class="py-4  mt-auto" style="background-color: #86ba8a; margin-top:15px !important;">
     <div class="container-fluid px-4">
         <div class="d-flex align-items-center justify-content-between small" style="color: black;">
             <div class="text-muted">Copyright &copy; Your Website 2023</div>
@@ -28,6 +28,8 @@ $(document).ready(function() {
 });
 </script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js" integrity="sha512-qZvrmS2ekKPF2mSznTQsxqPgnpkI4DNTlrdUmTzrDgektczlKNRRhy5X5AAOnx5S09ydFYWWNSfcEqDTTHgtNA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

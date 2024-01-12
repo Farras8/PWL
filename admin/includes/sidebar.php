@@ -1,4 +1,3 @@
-
 <div id="layoutSidenav_nav">
     <nav class="sb-sidenav accordion sb-sidenav-dark " id="sidenavAccordion" style="background-color: #1c612b; color: #ffffff;">
         <div class="sb-sidenav-menu">
@@ -52,10 +51,7 @@
                     </nav>
                 </div>
             </div>
-        </div>
-        <div class="sb-sidenav-footer" style="background-color: #86ba8a; color: #ffffff;" >
-            <div class="small">Logged in as:</div>
-            Start Bootstrap
+
         </div>
     </nav>
 </div>

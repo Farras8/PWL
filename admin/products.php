@@ -5,6 +5,8 @@
         <div class="card-header">
             <h4 class="mb-0">Products
                 <a href="products-create.php" class="btn btn-primary float-end">Add Product</a>
+                <a href="export.php" class="btn btn-danger float-end " style="margin-right: 10px;">export</a>
+                <a href="form.php" class="btn btn-warning float-end" style="margin-right: 10px;">import</a>
             </h4>
         </div>
         <div class="card-body">
@@ -17,7 +19,7 @@
             JOIN categories ON products.category_id = categories.id");
             if (mysqli_num_rows($products) > 0) {
             ?>
-                <div class="table-responsive">
+                <div class="table-responsive" >
                     <table class="table table-stripped table-bordered">
                         <thead>
                             <tr>
@@ -31,21 +33,24 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($products as $Item) : ?>
+                            
+                            <?php
+                            $i = 1;
+                             foreach ($products as $row) : ?>
                                 <tr>
-                                    <td><?= $Item['id'] ?></td>
-                                    <td><?= $Item['category_name'] ?></td>
-                                    <td><?= $Item['name'] ?></td>
-                                    <td><?= $Item['description'] ?></td>
-                                    <td><?= $Item['price'] ?></td>
-                                    <td><?= $Item['quantity'] ?></td>
+                                    <td><?php echo $i++; ?></td>
+                                    <td><?php echo $row['category_name']; ?></td>
+                                    <td><?php echo $row['name']; ?></td>
+                                    <td><?php echo $row['description']; ?></td>
+                                    <td><?php echo $row['price']; ?></td>
+                                    <td><?php echo $row['quantity']; ?></td>
                                     <td>
-                                        <a href="products-edit.php?id=<?= $Item['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
-                                        <a href="products-delete.php?id=<?= $Item['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want delete this data.')">Delete</a>
+                                        <a href="products-edit.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
+                                        <a href="products-delete.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure want delete this data.')">Delete</a>
                                     </td>
                                 </tr>
                             <?php endforeach; ?>
-                            </tbody>
+                        </tbody>
                     </table>
                 </div>
             <?php

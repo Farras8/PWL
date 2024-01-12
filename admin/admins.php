@@ -24,9 +24,11 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($admins as $adminItem) : ?>
+                            <?php 
+                            $i = 1;
+                            foreach ($admins as $adminItem) : ?>
                                 <tr>
-                                    <td><?= $adminItem['id'] ?></td>
+                                    <td><?= $i++ ?></td>
                                     <td><?= $adminItem['name'] ?></td>
                                     <td>
                                         <a href="admins-edit.php?id=<?= $adminItem['id']; ?>" class="btn btn-warning btn-sm">Edit</a>

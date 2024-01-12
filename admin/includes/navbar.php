@@ -12,6 +12,13 @@
         <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fas fa-user fa-fw"></i>
+                <?php
+                    if (isset($_SESSION['name'])) {
+                        echo $_SESSION['name'];
+                    } else {
+                        echo "Guest";
+                    }
+                    ?>
             </a>
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="../logout.php">Logout</a></li>

@@ -3,7 +3,7 @@
 $servername = 'localhost:3307';
 $username = 'root';
 $pass = '';
-$db = 'pwl_db';
+$db = 'bismillahworkterus';
 
 $conn = mysqli_connect($servername, $username, $pass, $db );
 

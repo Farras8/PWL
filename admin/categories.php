@@ -5,6 +5,8 @@
         <div class="card-header">
             <h4 class="mb-0">Category
                 <a href="categories-create.php" class="btn btn-primary float-end">Add Category</a>
+                <a href="exportCategories.php" class="btn btn-danger float-end " style="margin-right: 10px;">export</a>
+                <a href="formCategories.php" class="btn btn-warning float-end" style="margin-right: 10px;">import</a>
             </h4>
         </div>
         <div class="card-body">
@@ -25,9 +27,12 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <?php foreach ($categories as $Item) : ?>
+                            <?php 
+                            $i = 1;
+                            foreach ($categories as $Item) : 
+                            ?>
                                 <tr>
-                                    <td><?= $Item['id'] ?></td>
+                                    <td><?= $i++; ?></td>
                                     <td><?= $Item['name'] ?></td>
                                     <td>
                                         <a href="categories-edit.php?id=<?= $Item['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
